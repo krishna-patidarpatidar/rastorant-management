@@ -1,15 +1,13 @@
-import rastorantApi from "../Service";
+import rastorantApi from "../Service";  
 
 const MenuApi = rastorantApi.injectEndpoints({
   endpoints: (builder) => ({
     getMenu: builder.query({
-      query: () => ({
-        url: "/menu/getAllMenu",
-        method: "GET",
-      }),
+      query: () => "/menu/getAllMenu",  
       providesTags: ["Menu"],
     }),
   }),
 });
-export const { useGetMenuQuery } = MenuApi;
+
+export const { useGetMenuQuery } = MenuApi; 
 export default MenuApi;
