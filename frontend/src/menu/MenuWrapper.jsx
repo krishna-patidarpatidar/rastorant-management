@@ -3,13 +3,13 @@ import MenuList from './MenuList';
 import { useGetMenuQuery } from '../redux/apiS/MenuApi';  
 
 const MenuWrapper = () => {
-    const { data, isLoading, isError } = useGetMenuQuery();  
+    const {data: menuItems , isLoading, isError } = useGetMenuQuery();  
 
-    console.log(data);
+    console.log(menuItems);
     console.log(isLoading);
     console.log(isError);
 
-    return <MenuList />;
+    return <MenuList  data={menuItems}/>;
 };
 
 export default MenuWrapper;

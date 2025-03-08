@@ -1,10 +1,14 @@
 import React from 'react'
 import MenuWrapper from './menu/MenuWrapper'
+import { OrderProvider } from './context/OrderContext'
 
 const App = () => {
   return (
-    <div>App
+    <div>
+      <OrderProvider>
       <MenuWrapper />
+      </OrderProvider>
+    
     </div>
   )
 }
