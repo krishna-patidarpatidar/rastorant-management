@@ -1,5 +1,5 @@
 const Router = require('express').Router();
-const MenuRoute = require('./menu/Route');
+const MenuRoute = require('./menu/MenuRoute');
 const OrderRoute= require('./order/OrderRoute');
 const TableRoute = require('./table/TableRoute')
 const UserRoute = require('./users/UserRoute')

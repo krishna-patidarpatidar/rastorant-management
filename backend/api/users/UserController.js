@@ -37,7 +37,7 @@ UserController.login = async (req, res) => {
     if (!isValidPassword) {
       return res.status(400).json({ message: "Invalid password" });
     }
-    const token = jwt.sign({ id: user }, process.env.SECRET_KEY, {
+    const token = jwt.sign({ user: user }, process.env.SECRET_KEY, {
       expiresIn: "1h",
     });
     res.send({ msg: "User login successfully", user, token });
